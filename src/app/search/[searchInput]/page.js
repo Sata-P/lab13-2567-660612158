@@ -1,7 +1,9 @@
 "use client";
 
-import { MovieRow } from "@/components/MovieRow";
-import { movieDB } from "@/libs/movieDB";
+import  MovieRow  from "@components/MovieRow";
+import { movieDB } from "@lib/movieDB";
+
+
 
 export default function SearchResultPage({params}) {
   //tip1 : before filtering movie, replace all "%20" with " " (space) in the input
@@ -23,7 +25,7 @@ export default function SearchResultPage({params}) {
   const filteredMovies = movieDB.filter((movie) => movie.title.toLowerCase().includes(processedSearchInput.toLowerCase())
 );
 
-console.log(filteredMovies[0].id)
+
 
   return (
     <div>
